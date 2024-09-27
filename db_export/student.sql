@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 27, 2024 at 06:37 PM
+-- Generation Time: Sep 27, 2024 at 06:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,9 +40,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`studentid`, `studentname`, `studentemail`, `studentnumber`, `updated_at`) VALUES
-(1, 'Yusef Ramy', 'yuseframy14@gmail.com', 10203040, '2024-09-27 00:18:31'),
-(2, 'ABO RAMY', 'yousifking612@gmail.com', 1095132780, '2024-09-27 00:37:15'),
-(3, 'Mohamed Ali', 'yousif612@gmail.com', 1554725213, '2024-09-27 02:21:39');
+(1, 'Yusef Ramy', 'yuseframy14@gmail.com', 1095132780, '2024-09-27 16:51:27');
 
 --
 -- Indexes for dumped tables
