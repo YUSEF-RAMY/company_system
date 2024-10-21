@@ -4,9 +4,9 @@
 @section('create_student_form')
 
 <h1 class="text-center text-primary my-3">Update Student</h1>
-<h1 class="text-center text-primary my-3">Update Student Id : {{$student->studentid}} </h1>
+{{-- <h1 class="text-center text-primary my-3">Update Student Id : {{$student->studentid}} </h1> --}}
 
-<form method="post" action="{{ route('allstudent.update',$student->studentid) }}">
+<form method="post" action="{{ route('allstudent.update', $student->studentid) }}">
     @csrf
     @method('PUT')
     <div class="mb-3">

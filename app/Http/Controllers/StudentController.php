@@ -71,14 +71,14 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Student $studentid)
+    public function destroy($studentid)
     {
         $student = Student::find($studentid);
         $student->delete();
         return redirect('allstudent')->with('delete_done','student is deleted');
 
         // Retrieving a single student and deleting it
-$student = Student::where('$student->studentid', true)->get();
+// $student = Student::where('$student->studentid', true)->get();
 
 
     }
