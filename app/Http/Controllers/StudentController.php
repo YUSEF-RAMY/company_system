@@ -57,7 +57,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, Student $studentid)
     {
         $student = Student::find($studentid);
         $student -> studentname = $request -> fullname;
@@ -73,16 +73,12 @@ class StudentController extends Controller
      */
     public function destroy(Student $studentid)
     {
-        // $student = Student::find($studentid);
-        // $student->delete();
-        // return redirect('allstudent')->with('delete_done','student is deleted');
+        $student = Student::find($studentid);
+        $student->delete();
+        return redirect('allstudent')->with('delete_done','student is deleted');
 
         // Retrieving a single student and deleting it
 $student = Student::where('$student->studentid', true)->get();
-
-if ($student) {
-    $student->delete();
-}
 
 
     }
