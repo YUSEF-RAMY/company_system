@@ -44,12 +44,12 @@
       <td class="d-flex ">
 
           
-          <form action="{{ route('allstudent.destroy', $student->studentid) }}" method="post">
+          <form action="{{ route('allstudent.destroy', $student->id) }}" method="post">
               @csrf
               @method('DELETE')
               <button type="submit" class="btn btn-danger mx-2">DELETE</button>
             </form>
-            <a href="{{ route('allstudent.edit', $student->studentid) }}" class="btn btn-primary">Edit</a>
+            <a href="{{ route('allstudent.edit', $student->id) }}" class="btn btn-primary">Edit</a>
       </td>
     </tr>
     @endforeach

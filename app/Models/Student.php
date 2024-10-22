@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $table = 'student';
-    protected $fillable = ['studentname','studentemail','studentnumber'] ;
+    protected $guarded = [] ;
     public $timestamps = false;
 }

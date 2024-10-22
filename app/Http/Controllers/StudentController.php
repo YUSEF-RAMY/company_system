@@ -48,18 +48,18 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $studentid)
+    public function edit($id)
     {
-        $student = Student::find($studentid);
-        return view('students.edit')->with('student',$student);
+        $student = Student::find($id);
+        return view('students.edit', compact('student'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $studentid)
+    public function update(Request $request, $id)
     {
-        $student = Student::find($studentid);
+        $student = Student::find($id);
         $student -> studentname = $request -> fullname;
         $student -> studentemail = $request -> email;
         $student -> studentnumber = $request -> phone;
@@ -71,9 +71,9 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($studentid)
+    public function destroy($id)
     {
-        $student = Student::find($studentid);
+        $student = Student::find($id);
         $student->delete();
         return redirect('allstudent')->with('delete_done','student is deleted');
 
